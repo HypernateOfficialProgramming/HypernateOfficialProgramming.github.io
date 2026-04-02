@@ -5,9 +5,14 @@
     <title>BC - Main Page</title>
 </head>
 <body>
-    <a href="https://hypernateofficialprogramming.github.io/beacon/">
-      <img src="https://hypernateofficialprogramming.github.io/beacon/assets/logos/Beacon.png" alt="Us, The Defenders" width="400" height="72">
-    </a>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(err => console.error('Failed to load header:', err));
+    </script>
     <div id="center">
         <h1>The Beacon Coalition</h1>
         <p>We stand as a light in the chaos, uniting all worlds from across the universe for peace and progress.</p>
