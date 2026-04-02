@@ -32,3 +32,8 @@ body {
       background: #1110;
       color: white;
     }
+#center {
+    text-align: center;
+    margin-top: 50px;
+    background: #1118;
+}
