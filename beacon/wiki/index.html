@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>BC - Wiki</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(err => console.error('Failed to load header:', err));
+    </script>
+    <div id="center">
+        <h1>Welcome to the Beacon Coalition!</h1>
+        <p>Click on any of the portraits below to see the respective personnel's page.</p>
+    </div>
+</body>
