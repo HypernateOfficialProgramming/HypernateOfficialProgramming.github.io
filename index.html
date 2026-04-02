@@ -14,6 +14,28 @@
     <h1>Subsystems</h1>
     <ul>
         <li><strong><a href="https://hypernateofficialprogramming.github.io/projects/index.html">Subsystem P</a></strong></li>
+        <li><strong><a id="secret" href="https://hypernateofficialprogramming.github.io/proof/index.html">Secret</a></strong></li>
     </ul>
+
+<script>
+  const today = new Date();
+  const month = today.getMonth();
+  const day = today.getDate();
+
+  if (month === 3 && day === 1) {
+    console.log("Oracle Engine Active");
+  } else {
+    console.log("ERROR: NO DATA DETECTED")
+    console.log("Oracle Engine Inactive.")
+    console.log("There is no light to follow yet.")
+    console.log("Nothing left to run.")
+      
+    const link = document.getElementById('secret');
+    link.removeAttribute('href');
+    link.style.color = 'gray';
+    link.style.pointerEvents = 'none';
+    link.style.textDecoration = 'none';
+  }
+</script>
 </body>
 </html>
