@@ -23,23 +23,27 @@ function caesar(char, offset) {
 
   if (!isUpper && !isLower) return char;
 
-  const base = isUpper ? 'A'.charCodeAt(0) : 'a'.charCodeAt(0);
+  const base = isUpper ? 65 : 97;
   const normalized = char.charCodeAt(0) - base;
 
-  return String.fromCharCode(base + ((normalized + offset) % 26));
+  return String.fromCharCode(
+    base + ((normalized + offset + 26) % 26)
+  );
 }
 
 function processText() {
   const text = document.getElementById("inputText").value;
   const seed = parseInt(document.getElementById("seedInput").value);
+  const offset = parseInt(document.getElementById("offsetInput").value);
+  const decode = document.getElementById("decode").checked;
 
-  if (isNaN(seed)) {
-    alert("Warning: Seed not valid!");
+  if (isNaN(seed) || isNaN(offset)) {
+    alert("INVALID INPUT");
     return;
   }
 
   const randMode = mulberry32(seed);
-  const randShift = mulberry32(seed + 2);
+  const randShift = mulberry32(offset);
 
   let result = "";
 
@@ -47,11 +51,14 @@ function processText() {
     const mode = Math.floor(randMode() * 3);
 
     if (mode === 1) {
+      
       result += atbash(text[i]);
     } 
     else if (mode === 2) {
       const shift = Math.floor(randShift() * 26);
-      result += caesar(text[i], shift);
+      const finalShift = decode ? -shift : shift;
+
+      result += caesar(text[i], finalShift);
     } 
     else {
       result += text[i];
