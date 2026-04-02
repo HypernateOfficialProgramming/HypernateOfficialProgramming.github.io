@@ -13,3 +13,22 @@ body {
   
     color: #FFFFFF; 
 }
+#volume-slider {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      width: 100px;
+      opacity: 0.5;
+      z-index: 1000;
+    }
+#volume-slider:hover {
+      opacity: 1;
+    }
+#controls {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      background: #111;
+      color: white;
+    }
