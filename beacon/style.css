@@ -6,4 +6,10 @@ body {
     Roboto, 
     Arial, 
     sans-serif;
+    background-image: url("assets/stars.png");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+  
+    color: #FFFFFF; 
 }
