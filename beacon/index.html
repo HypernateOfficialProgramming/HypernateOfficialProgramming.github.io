@@ -2,28 +2,71 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
-    <title>BC - Main Page</title>
+    <title>BC - Access Gateway</title>
 </head>
 <body>
+
+<div id="gate">
+    <h1>Enter Gateway Key</h1>
+    <input type="text" id="keyInput" placeholder="Enter key...">
+    <button onclick="checkKey()">Access</button>
+    <p id="status"></p>
+</div>
+
+<div id="main" style="display:none;">
     <div id="header-container"></div>
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-            })
-            .catch(err => console.error('Failed to load header:', err));
-    </script>
+
     <div id="center">
         <h1>The Beacon Coalition</h1>
         <p>We stand as a light in the chaos, uniting all worlds from across the universe for peace and progress.</p>
         <h2>Our Goal</h2>
-        <p>We aim to unite the universes of existence, setting aside differences to build a fair and lasting union.</p></div>
+        <p>We aim to unite the universes of existence, setting aside differences to build a fair and lasting union.</p>
+    </div>
+
     <div id="controls">
-        <audio id="bgm" loop autoplay>
-          <source src="assets/BeaconCoalitionTheme.wav" type="audio/wav">
+        <audio id="bgm" loop>
+            <source src="assets/BeaconCoalitionTheme.wav" type="audio/wav">
         </audio>
         <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.5">
-         <script src="js/music.js"></script>
-        </div>
+    </div>
+</div>
+
+<script>
+async function checkKey() {
+    const input = document.getElementById("keyInput").value.trim();
+    const status = document.getElementById("status");
+
+    try {
+        const response = await fetch("assets/key.txt");
+        const realKey = (await response.text()).trim();
+
+        if (input === realKey) {
+            // Unlock site
+            document.getElementById("gate").style.display = "none";
+            document.getElementById("main").style.display = "block";
+
+            // Load header
+            fetch('header.html')
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+
+            // Start music AFTER interaction (this is the important fix)
+            const audio = document.getElementById("bgm");
+            audio.volume = 0.5;
+            audio.play();
+
+        } else {
+            // Access denied
+            document.body.innerHTML = "<h1 style='color:red;text-align:center;'>ACCESS DENIED</h1>";
+        }
+
+    } catch (err) {
+        status.textContent = "Error loading key.";
+    }
+}
+</script>
+
 </body>
+</html>
