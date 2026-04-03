@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>2219 Aluminum Alloy - BC</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch('../../header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(err => console.error('Failed to load header:', err));
+    </script>
+    <div id="center">
+        <h1>2219 Aluminum Alloy</h1>
+        <p>2219 aluminium alloy is an alloy in the wrought aluminium-copper family (2000 or 2xxx series).</p>
+        <h2>Personality</h2>
+        <p>Due to his use in the Space Shuttle Standard Weight Tank, Columbus module, and Cupola Module, he is very good at aerodynamics, engineering, and space exploration.</p>
+        <div class="infobox">
+          <h2>2219 Aluminum Alloy</h2>
+          <img src="../../assets/members/2219.png" alt="2219 Aluminum Alloy" width="200">
+          <table>
+              <tr>
+                  <th>Symbol</th>
+                  <td>Al 92<br/>Cu  5<br/>... 3<br/></td>
+              </tr>
+              <tr>
+                  <th>Gender</th>
+                  <td>male</td>
+              </tr>
+              <tr>
+                  <th>Discoverer</th>
+                  <td>Sentinel-II</td>
+              </tr>
+              <tr>
+                  <th>Tags</th>
+                  <td><a href="https://www.tumblr.com/communities/element-cattos-fans?tagged=2219%20Aluminum%20Alloy">#2219 Aluminum Alloy</a></td>
+              </tr>
+              <tr>
+                  <th>Role</th>
+                  <td>Administrator, Engineer</td>
+              </tr>
+              <tr>
+                  <th>Status</th>
+                  <td>Active</td>
+              </tr>
+          </table>
+        </div>
+    </div>
+</body>
