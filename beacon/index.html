@@ -32,39 +32,42 @@
 </div>
 
 <script>
+const storedHash = "ead5192dfaa0db61afbd47edbbc618f2dc5e683ec45a5027ea4b918f3745cb2a";
+
+async function hashText(text) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(text);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  return [...new Uint8Array(hashBuffer)]
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
 async function checkKey() {
-    const input = document.getElementById("keyInput").value.trim();
-    const status = document.getElementById("status");
+  const input = document.getElementById("keyInput").value.trim();
 
-    try {
-        const response = await fetch("assets/key.txt");
-        const realKey = (await response.text()).trim();
+  const inputHash = await hashText(input);
 
-        if (input === realKey) {
-            // Unlock site
-            document.getElementById("gate").style.display = "none";
-            document.getElementById("main").style.display = "block";
+  if (inputHash === storedHash) {
+    // Unlock site
+    document.getElementById("gate").style.display = "none";
+    document.getElementById("main").style.display = "block";
 
-            // Load header
-            fetch('header.html')
-                .then(res => res.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                });
+    // Load header
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      });
 
-            // Start music AFTER interaction (this is the important fix)
-            const audio = document.getElementById("bgm");
-            audio.volume = 0.5;
-            audio.play();
+    // Play music (now allowed because user interacted)
+    const audio = document.getElementById("bgm");
+    audio.volume = 0.5;
+    audio.play();
 
-        } else {
-            // Access denied
-            document.body.innerHTML = "<h1 style='color:red;text-align:center;'>ACCESS DENIED</h1>";
-        }
-
-    } catch (err) {
-        status.textContent = "Error loading key.";
-    }
+  } else {
+    document.body.innerHTML = "<h1 style='color:red;text-align:center;'>ACCESS DENIED</h1>";
+  }
 }
 </script>
 
