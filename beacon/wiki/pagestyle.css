@@ -18,3 +18,11 @@ body {
     margin-top: 50px;
     background: #1118;
 }
+.infobox {
+    width: 300px;
+    float: right;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-left: 15px;
+}
