@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Ti-46 - BC</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch('../../header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(err => console.error('Failed to load header:', err));
+    </script>
+    <div id="center">
+        <h1>Titanium-46</h1>
+        <p>Titanium-46 (<sup>46</sup>Ti, Athena, TI-2E) is a stable isotope of Titanium. She looks like her baseline sister, but is tinted dark grey, along with hosting a large communication antenna.</p>
+        <h2>Personality</h2>
+        <p>Titanium-46 usually hides from anything not part of the Beacon Coalition.</p>
+        <h2>Origin</h2>
+        <p>Minerva was presumably constructed by <a href="../wiki/Zephyrus/index.html">Zephyrus</a> in order to explore the Felidus Existential Network. Somehow, Minerva instead fell into the Cattoverse, the supposed origin of the FEN.</p>
+        <div class="infobox">
+          <h2>Titanium-46</h2>
+          <img src="../../assets/members/Ti46-Deployed.png" alt="Titanium-46" width="200">
+          <table>
+              <tr>
+                  <th>Symbol</th>
+                  <td><sup>46</sup>Ti</td>
+              </tr>
+              <tr>
+                  <th>Gender</th>
+                  <td>female</td>
+              </tr>
+              <tr>
+                  <th>Atomic Number</th>
+                  <td>46</td>
+              </tr>
+              <tr>
+                  <th>Atomic Mass</th>
+                  <td>45.9526</td>
+              </tr>
+              <tr>
+                  <th>Group</th>
+                  <td>Transition metal</td>
+              </tr>
+              <tr>
+                  <th>Discoverer</th>
+                  <td>Sentinel-II</td>
+              </tr>
+              <tr>
+                  <th>Tags</th>
+                  <td><a href="https://www.tumblr.com/communities/element-cattos-fans?tagged=Titanium%2046">#Titanium 46</a></td>
+              </tr>
+              <tr>
+                  <th>Role</th>
+                  <td>Scout, Analyser</td>
+              </tr>
+              <tr>
+                  <th>Status</th>
+                  <td>Active</td>
+              </tr>
+          </table>
+        </div>
+    </div>
+</body>
