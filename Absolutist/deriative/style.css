@@ -1,0 +1,117 @@
+@font-face {
+  font-family: '6809-Chargen';
+    src:  url('6809-Chargen.ttf.woff') format('woff'),
+    url('6809-Chargen.ttf.eot'),
+    url('6809-Chargen.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html {
+    font-size:18px;
+    color:white;
+    text-align:center;
+}
+
+body {
+    background-image: url("starfield_tileable.jpg");
+    background-repeat: repeat;
+    
+    font-family: '6809-Chargen';
+}
+
+h1 {
+    font-size:3em;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+}
+
+.btn {
+  border-radius: 0.333em;
+  padding: 0.5em 0.4167em;
+  font-size: 1.167em;
+  text-decoration: none;
+  margin: 0.5em;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  min-width: 11em;
+}
+
+.btn:active {
+  transform: translate(0em, 0.25em);
+  -webkit-transform: translate(0em, 0.25em);
+  box-shadow: 0em 0.0833em 0em 0em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+    font-size:0.9em;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 0.25em;
+}
+
+tr:nth-child(even){background-color: rgba(100,100,100,0.5);}
+tr:nth-child(odd){background-color: rgba(0,0,0,0);}
+
+th {
+    padding-top: 0.5833em;
+    padding-bottom: 0.5833em;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
+th.headerSortUp { 
+    background-image: url(asc.gif) !important;
+}
+
+th.headerSortDown {
+    background-image: url(desc.gif) !important; 
+}
+
+th.header {
+    background-image: url(bg.gif);
+    cursor: pointer;
+    background-repeat: no-repeat; 
+    background-position: center right; 
+    padding-left: 20px; 
+    border-right: 1px solid #dad9c7; 
+    margin-left: -1px; 
+}
+
+.invis {
+  border: 0px;
+  background-color: rgba(0,0,0,0);
+}
+
+input {
+    font-family: '6809-Chargen'; 
+    font-size:1em;
+    color: white;
+    background-color:  rgba(0,0,0,0);
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+} 
