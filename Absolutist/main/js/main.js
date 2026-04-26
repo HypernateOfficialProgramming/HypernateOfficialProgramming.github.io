@@ -37,7 +37,7 @@ function loop() {
     window.addEventListener('keydown', (event) => {
     switch (event.key.toLowerCase()) {
         case 'd': vx += 0.1; break;
-        case 'a': vx -= 0.1); break;
+        case 'a': vx -= 0.1; break;
         case 'w': vy += 0.1; break;
         case 's': vy -= 0.1; break;
     }
