@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             clearInterval(interval);
             
             setTimeout(() => {
-                window.location.href = "https://hypernateofficialprogramming.github.io/Absolutist/main/
+                window.location.href = "https://hypernateofficialprogramming.github.io/Absolutist/main/"
             }, 500);
         }
 
