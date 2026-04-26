@@ -16,9 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 500);
         }
 
-        // Update CSS and text
         progressFill.style.width = `${progress}%`;
         progressText.innerText = `${Math.round(progress)}%`;
 
-    }, 500); // Update every 0.5 seconds
+    }, 500);
 });
