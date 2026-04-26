@@ -14,6 +14,24 @@
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ antialias: true });
+        const inconceivable = [
+            "",
+            "bold",
+            "italic",
+            "bold italic",
+            "underline",
+            "italic underline",
+            "bold underline",
+            "bold italic underline",
+            "strike",
+            "underline strike",
+            "italic underline strike",
+            "bold underline strike",
+            "bold italic underline strike"
+        ];
+
+        const greaterWorld = document.getElementById("greater-world");
+        
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
 
@@ -46,10 +64,19 @@
         
             position.needsUpdate = true;
             renderer.render(scene, camera);
+
+            greaterWorld.className = inconceivable[Math.floor(Math.random() * styles.length)];
+            
+            greaterWorld.textContent = "?";
+            lastChange = time;
         };
 
         animate()
     </script>
+    <!-- window.location.href = "https://hypernateofficialprogramming.github.io/Absolutist/main/"; -->
+    <div id="greater-world">
+        <p>?</p>
+    </div>
 
     <!-- ARITFACT CAST INTO VOID -->
     <audio id="mus" loop autoplay muted>
