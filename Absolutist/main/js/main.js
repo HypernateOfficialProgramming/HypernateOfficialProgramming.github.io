@@ -10,6 +10,11 @@ const objects = [
   }
 ]
 
+var x = 0
+var y = 0
+var vx = 0
+var vy = 0
+
 function loop() {
     ctx.fillStyle = "#000000";
     ctx.fillRect(0, 0, spacetime.width, spacetime.height);
@@ -24,10 +29,25 @@ function loop() {
       if (obj["type"] == "Node") {  
         ctx.fillStyle = "white";
         ctx.beginPath();
-        ctx.arc(spacetime.width/2 + obj["x"], spacetime.height/2 + obj["y"], obj["rad"], 0, Math.PI * 2);
+        ctx.arc(spacetime.width/2 + (obj["x"] - x), spacetime.height/2 + (obj["y"] - y), obj["rad"], 0, Math.PI * 2);
         ctx.fill();
       }
     }
+
+    window.addEventListener('keydown', (event) => {
+    switch (event.key.toLowerCase()) {
+        case 'd': vx += 0.1; break;
+        case 'a': vx -= 0.1); break;
+        case 'w': vy += 0.1; break;
+        case 's': vy -= 0.1; break;
+    }
+    });
+
+    vx /= 0.99
+    vy /= 0.99
+    x += vx
+    y += vy
+
     requestAnimationFrame(loop);
 }
 
