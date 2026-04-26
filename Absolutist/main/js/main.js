@@ -15,6 +15,16 @@ var y = 0
 var vx = 0
 var vy = 0
 
+const keys = { w: false, a: false, s: false, d: false };
+
+window.addEventListener('keydown', (e) => {
+    if (keys.hasOwnProperty(e.key.toLowerCase())) keys[e.key.toLowerCase()] = true;
+});
+
+window.addEventListener('keyup', (e) => {
+    if (keys.hasOwnProperty(e.key.toLowerCase())) keys[e.key.toLowerCase()] = false;
+});
+
 function loop() {
     ctx.fillStyle = "#000000";
     ctx.fillRect(0, 0, spacetime.width, spacetime.height);
@@ -34,14 +44,10 @@ function loop() {
       }
     }
 
-    window.addEventListener('keydown', (event) => {
-    switch (event.key.toLowerCase()) {
-        case 'd': vx += 0.1; break;
-        case 'a': vx -= 0.1; break;
-        case 'w': vy += 0.1; break;
-        case 's': vy -= 0.1; break;
-    }
-    });
+    if (keys.d) {vx += 0.01};
+    if (keys.a) {vx -= 0.01};
+    if (keys.w) {vy += 0.01};
+    if (keys.s) {vy -= 0.01};
 
     vx /= 0.99
     vy /= 0.99
