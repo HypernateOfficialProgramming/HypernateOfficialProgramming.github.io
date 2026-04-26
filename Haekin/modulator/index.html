@@ -26,7 +26,10 @@
         const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, side: THREE.DoubleSide });
         const triangle = new THREE.Mesh(geometry, material);
         scene.add(triangle);
-
+        geometry.setAttribute(
+            'position',
+            new THREE.BufferAttribute(new Float32Array(origin_vertices), 3)
+        );
         camera.position.z = 5;
 
         const position = geometry.attributes.position;
