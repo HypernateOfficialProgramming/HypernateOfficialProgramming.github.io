@@ -49,8 +49,8 @@ function loop() {
     if (keys.s) {vy += 0.1};
     if (keys.w) {vy -= 0.1};
 
-    vx *= 0.9
-    vy *= 0.9
+    vx *= 0.98
+    vy *= 0.98
     x += vx
     y += vy
 
