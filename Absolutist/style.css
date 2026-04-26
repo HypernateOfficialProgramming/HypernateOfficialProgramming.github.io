@@ -116,6 +116,12 @@ a:active {
     color: white;
 } 
 
+#loading-screen {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
 .loader-container {
     text-align: center;
     width: 50%;
