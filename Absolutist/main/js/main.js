@@ -41,6 +41,14 @@ function loop() {
         ctx.beginPath();
         ctx.arc(spacetime.width/2 + (obj["x"] - x), spacetime.height/2 + (obj["y"] - y), obj["rad"], 0, Math.PI * 2);
         ctx.fill();
+
+        if (Math.sqrt(((obj.x - x)**2)+((obj.y - y)**2))<20) {
+          ctx.font = "bold 40px Calibri";
+          ctx.fillStyle = "white";
+          ctx.textAlign = "center";
+          
+          ctx.fillText("E - Contact", canvas.width / 2, 10);
+        }
       }
     }
 
