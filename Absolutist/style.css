@@ -1,8 +1,8 @@
 @font-face {
   font-family: '6809-Chargen';
-    src:  url('../6809-Chargen.ttf.woff') format('woff'),
-    url('../6809-Chargen.ttf.eot'),
-    url('../6809-Chargen.eot?#iefix') format('embedded-opentype'); 
+    src:  url('6809-Chargen.ttf.woff') format('woff'),
+    url('6809-Chargen.ttf.eot'),
+    url('6809-Chargen.eot?#iefix') format('embedded-opentype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background-image: url("../starfield_tileable.jpg");
+    background-image: url("starfield_tileable.jpg");
     background-repeat: repeat;
     
     font-family: '6809-Chargen';
@@ -71,15 +71,15 @@ th {
 }
 
 th.headerSortUp { 
-    background-image: url(../asc.gif) !important;
+    background-image: url(asc.gif) !important;
 }
 
 th.headerSortDown {
-    background-image: url(../desc.gif) !important; 
+    background-image: url(desc.gif) !important; 
 }
 
 th.header {
-    background-image: url(../bg.gif);
+    background-image: url(bg.gif);
     cursor: pointer;
     background-repeat: no-repeat; 
     background-position: center right; 
