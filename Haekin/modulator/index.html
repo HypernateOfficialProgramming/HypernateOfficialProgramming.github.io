@@ -14,23 +14,15 @@
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ antialias: true });
-        const inconceivable = [
-            "",
-            "bold",
-            "italic",
-            "bold italic",
-            "underline",
-            "italic underline",
-            "bold underline",
-            "bold italic underline",
-            "strike",
-            "underline strike",
-            "italic underline strike",
-            "bold underline strike",
-            "bold italic underline strike"
-        ];
+        const types = ["underline", "overline", "line-through"];
 
         const greaterWorld = document.getElementById("greater-world");
+        
+        function update() {
+            const selected = types.filter(() => Math.random() > 0.5);
+
+            greaterWorld.style.textDecoration = selected.join(" ");
+        };
         
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
@@ -68,6 +60,7 @@
             greaterWorld.className = inconceivable[Math.floor(Math.random() * inconceivable.length)];
             
             greaterWorld.textContent = "?";
+            update()
         };
 
         animate()
