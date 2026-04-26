@@ -2,11 +2,26 @@ const spacetime = document.getElementById("space");
 const ctx = spacetime.getContext("2d");
 const objects = [
   {
+    id: "Hae",
     type: "Node",
     x: -100,
     y: 200,
     rad: 16,
-    redi: "https://youtube.com/playlist?list=PLP8zGIXPmM4EikfD1c39oPuzNeENiv0JC&si=lpoxwJ_yybuymb4Y"
+    redi: "https://youtube.com/playlist?list=PLP8zGIXPmM4EikfD1c39oPuzNeENiv0JC&si=lpoxwJ_yybuymb4Y",
+    connections: [
+      "Nyo"
+    ]
+  },
+  {
+    id: "Nyo",
+    type: "Node",
+    x: -140,
+    y: 220,
+    rad: 16,
+    redi: "https://www.youtube.com/channel/UCMcQLwt34BG2vTowHSuz2uQ",
+    connections: [
+      "Hae"
+    ]
   }
 ]
 
