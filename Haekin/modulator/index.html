@@ -65,7 +65,7 @@
             position.needsUpdate = true;
             renderer.render(scene, camera);
 
-            greaterWorld.className = inconceivable[Math.floor(Math.random() * styles.length)];
+            greaterWorld.className = inconceivable[Math.floor(Math.random() * inconceivable.length)];
             
             greaterWorld.textContent = "?";
             lastChange = time;
@@ -77,7 +77,7 @@
     <div id="greater-world">
         <p>?</p>
     </div>
-
+    
     <!-- ARITFACT CAST INTO VOID -->
     <audio id="mus" loop autoplay muted>
         <source src="https://hypernateofficialprogramming.github.io/Haekin/modulator/aciv.wav" type="audio/wav" />
