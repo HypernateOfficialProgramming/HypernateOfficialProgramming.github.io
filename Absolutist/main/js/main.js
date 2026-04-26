@@ -15,7 +15,7 @@ var y = 0
 var vx = 0
 var vy = 0
 
-const keys = { w: false, a: false, s: false, d: false };
+const keys = { w: false, a: false, s: false, d: false, e: false };
 
 window.addEventListener('keydown', (e) => {
     if (keys.hasOwnProperty(e.key.toLowerCase())) keys[e.key.toLowerCase()] = true;
@@ -48,6 +48,8 @@ function loop() {
           ctx.textAlign = "center";
           
           ctx.fillText("E - Contact", spacetime.width / 2, 40);
+
+          if (keys.e) {window.open(obj.redi, "_blank")};
         }
       }
     }
