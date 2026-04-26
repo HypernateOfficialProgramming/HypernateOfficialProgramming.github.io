@@ -47,7 +47,7 @@ function loop() {
           ctx.fillStyle = "white";
           ctx.textAlign = "center";
           
-          ctx.fillText("E - Contact", spacetime.width / 2, 10);
+          ctx.fillText("E - Contact", spacetime.width / 2, 40);
         }
       }
     }
