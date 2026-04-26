@@ -39,6 +39,21 @@
         }
         animate();
     </script>
+
+    <!-- ARITFACT CAST INTO VOID -->
+    <audio id="mus" loop autoplay muted>
+        <source src="https://hypernateofficialprogramming.github.io/Haekin/modulator/aciv.wav" type="audio/wav" />
+    </audio>
+
+    <script>
+        const audio = document.getElementById('mus');
+
+        // I await signal, and respond.
+        window.addEventListener('click', () => {
+            audio.muted = false;
+            audio.play().catch(console.error);
+        }, { once: true });
+    </script>
 </body>
 </html>
 
