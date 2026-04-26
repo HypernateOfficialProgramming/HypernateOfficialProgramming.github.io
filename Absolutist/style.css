@@ -117,6 +117,7 @@ a:active {
 } 
 
 #loading-screen {
+    width: 100%;
     position: fixed;
     justify-content: center;
     align-items: center;
