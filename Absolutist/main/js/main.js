@@ -44,13 +44,13 @@ function loop() {
       }
     }
 
-    if (keys.d) {vx += 0.01};
-    if (keys.a) {vx -= 0.01};
-    if (keys.w) {vy += 0.01};
-    if (keys.s) {vy -= 0.01};
+    if (keys.d) {vx += 0.1};
+    if (keys.a) {vx -= 0.1};
+    if (keys.s) {vy += 0.1};
+    if (keys.w) {vy -= 0.1};
 
-    vx /= 0.99
-    vy /= 0.99
+    vx *= 0.9
+    vy *= 0.9
     x += vx
     y += vy
 
