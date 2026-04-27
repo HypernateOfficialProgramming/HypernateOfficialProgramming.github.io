@@ -36,6 +36,32 @@ const objects = [
     ]
   },
   {
+    id: "Bey",
+    type: "Node",
+    x: -60,
+    y: 200,
+    rad: 16,
+    redi: "https://www.youtube.com/@TheyGottaCallMeBeyonder",
+    links: [
+      "Hae",
+      "Nal",
+      "Mah"
+    ]
+  },
+  {
+    id: "Mah",
+    type: "Node",
+    x: -100,
+    y: 200,
+    rad: 16,
+    redi: "https://www.youtube.com/@Maheen_AnimeFan",
+    links: [
+      "Hae",
+      "Nal",
+      "Bey"
+    ]
+  },
+  {
     id: "Gob",
     type: "Node",
     x: -90,
