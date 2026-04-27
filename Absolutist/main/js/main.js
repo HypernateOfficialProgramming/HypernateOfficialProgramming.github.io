@@ -16,11 +16,47 @@ const objects = [
     id: "Nyo",
     type: "Node",
     x: -140,
-    y: 220,
+    y: 240,
     rad: 16,
     redi: "https://www.youtube.com/channel/UCMcQLwt34BG2vTowHSuz2uQ",
     links: [
       "Hae"
+    ]
+  },
+  {
+    id: "Nal",
+    type: "Node",
+    x: -60,
+    y: 160,
+    rad: 16,
+    redi: "https://www.youtube.com/@Narciso9_FL0PTR0P1C4",
+    links: [
+      "Hae",
+      "Gob"
+    ]
+  },
+  {
+    id: "Gob",
+    type: "Node",
+    x: -90,
+    y: 0,
+    rad: 16,
+    redi: "https://www.youtube.com/@Go0berzYT",
+    links: [
+      "Hae",
+      "Nal"
+    ]
+  },
+  {
+    id: "Lui",
+    type: "Node",
+    x: 90,
+    y: -10,
+    rad: 16,
+    redi: "https://www.youtube.com/@Luiany/posts",
+    links: [
+      "Hae",
+      "Nal"
     ]
   },
   {
