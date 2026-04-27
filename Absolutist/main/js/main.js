@@ -121,7 +121,10 @@ function loop() {
           
           ctx.fillText("E - Contact", spacetime.width / 2, 40);
 
-          if (keys.e) {window.open(obj.redi, "_blank")};
+          if (keys.e) {
+            window.open(obj.redi, "_blank");
+            keys.e = false
+          };
         }
       }
     }
