@@ -97,7 +97,9 @@ const objects = [
     redi: "https://www.youtube.com/@AccidentalDoxxing/",
     links: [
       "Alx",
-      "Ton"
+      "Ton",
+      "Tmy",
+      "Trz"
     ]
   },
   {
