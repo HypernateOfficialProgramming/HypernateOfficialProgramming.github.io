@@ -8,7 +8,7 @@ const objects = [
     y: 200,
     rad: 16,
     redi: "https://youtube.com/playlist?list=PLP8zGIXPmM4EikfD1c39oPuzNeENiv0JC&si=lpoxwJ_yybuymb4Y",
-    connections: [
+    links: [
       "Nyo"
     ]
   },
@@ -19,7 +19,7 @@ const objects = [
     y: 220,
     rad: 16,
     redi: "https://www.youtube.com/channel/UCMcQLwt34BG2vTowHSuz2uQ",
-    connections: [
+    links: [
       "Hae"
     ]
   },
@@ -30,7 +30,7 @@ const objects = [
     y: 320,
     rad: 16,
     redi: "https://www.youtube.com/@Alaixis",
-    connections: [
+    links: [
       "Trz",
       "Tma",
       "Tmy",
@@ -45,7 +45,7 @@ const objects = [
     y: 380,
     rad: 16,
     redi: "https://www.youtube.com/@TON_618-4mz",
-    connections: [
+    links: [
       "Alx",
       "One",
       "Sec",
@@ -59,7 +59,7 @@ const objects = [
     y: 390,
     rad: 16,
     redi: "https://www.youtube.com/@SecondFanTheCreator",
-    connections: [
+    links: [
       "Alx",
       "One",
       "Sec",
@@ -73,7 +73,7 @@ const objects = [
     y: 290,
     rad: 16,
     redi: "https://www.youtube.com/@TrizziEhgan",
-    connections: [
+    links: [
       "Alx",
       "One",
       "Sec",
@@ -117,7 +117,7 @@ function loop() {
         ctx.arc(spacetime.width/2 + visx, spacetime.height/2 + visy, obj["rad"], 0, Math.PI * 2);
         ctx.fill();
 
-        for (let j=0;i<objects.connections.length;i++) {
+        for (let j=0;i<obj.links.length;i++) {
           ctx.beginPath();
 
           ctx.lineWidth = 4;
@@ -128,7 +128,7 @@ function loop() {
           var tx = visx
           var ty = visy
           for (let k=0;i<objects.length;i++) {
-            if (objects[k].id == objects.connections[j]) {
+            if (objects[k].id == obj.links[j]) {
               tx = objects[k].x - x
               ty = objects[k].y - y
               break
