@@ -89,6 +89,18 @@ const objects = [
     ]
   },
   {
+    id: "Nsx",
+    type: "Node",
+    x: 300,
+    y: 540,
+    rad: 16,
+    redi: "https://www.youtube.com/@AccidentalDoxxing/",
+    links: [
+      "Alx",
+      "Ton"
+    ]
+  },
+  {
     id: "Sec",
     type: "Node",
     x: 160,
