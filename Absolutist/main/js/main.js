@@ -41,7 +41,7 @@ const objects = [
   {
     id: "Ton",
     type: "Node",
-    x: 230,
+    x: 260,
     y: 380,
     rad: 16,
     redi: "https://www.youtube.com/@TON_618-4mz",
