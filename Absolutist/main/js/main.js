@@ -42,7 +42,7 @@ const objects = [
     id: "Ton",
     type: "Node",
     x: 200,
-    y: 360,
+    y: 380,
     rad: 16,
     redi: "https://www.youtube.com/@TON_618-4mz",
     connections: [
@@ -55,8 +55,8 @@ const objects = [
   {
     id: "Sec",
     type: "Node",
-    x: 180,
-    y: 340,
+    x: 160,
+    y: 390,
     rad: 16,
     redi: "https://www.youtube.com/@SecondFanTheCreator",
     connections: [
@@ -69,8 +69,8 @@ const objects = [
   {
     id: "Trz",
     type: "Node",
-    x: 240,
-    y: 320,
+    x: 210,
+    y: 330,
     rad: 16,
     redi: "https://www.youtube.com/@TrizziEhgan",
     connections: [
