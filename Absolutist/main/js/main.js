@@ -117,25 +117,26 @@ function loop() {
         ctx.arc(spacetime.width/2 + visx, spacetime.height/2 + visy, obj["rad"], 0, Math.PI * 2);
         ctx.fill();
 
-        for (let j=0;i<obj.links.length;j++) {
+        for (let j = 0; j < obj.links.length; j++) {
           ctx.beginPath();
-
+        
           ctx.lineWidth = 4;
           ctx.strokeStyle = "white";
           ctx.lineCap = "round";
-          
-          ctx.moveTo(spacetime.width/2 + visx, spacetime.height/2 + visy);
-          var tx = visx
-          var ty = visy
-          for (let k=0;i<objects.length;k++) {
-            if (objects[k].id == obj.links[j]) {
-              tx = objects[k].x - x
-              ty = objects[k].y - y
+        
+          let tx = visx;
+          let ty = visy;
+        
+          for (let k = 0; k < objects.length; k++) {
+            if (objects[k].id === obj.links[j]) {
+              tx = objects[k].x - x;
+              ty = objects[k].y - y;
             }
           }
-          
-          ctx.lineTo(spacetime.width/2 + tx, spacetime.height/2 + ty);
-          
+        
+          ctx.moveTo(spacetime.width / 2 + visx, spacetime.height / 2 + visy);
+          ctx.lineTo(spacetime.width / 2 + tx, spacetime.height / 2 + ty);
+        
           ctx.stroke();
         }
 
