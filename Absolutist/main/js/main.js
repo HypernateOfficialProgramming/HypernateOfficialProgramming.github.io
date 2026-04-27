@@ -81,8 +81,8 @@ const objects = [
     rad: 16,
     redi: "https://www.youtube.com/@Luiany/posts",
     links: [
-      "Hae",
-      "Nal"
+      "Nal",
+      "Gob"
     ]
   },
   {
