@@ -41,7 +41,7 @@ const objects = [
   {
     id: "Ton",
     type: "Node",
-    x: 200,
+    x: 230,
     y: 380,
     rad: 16,
     redi: "https://www.youtube.com/@TON_618-4mz",
@@ -70,7 +70,7 @@ const objects = [
     id: "Trz",
     type: "Node",
     x: 170,
-    y: 290,
+    y: 270,
     rad: 16,
     redi: "https://www.youtube.com/@TrizziEhgan",
     links: [
