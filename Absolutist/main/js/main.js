@@ -72,7 +72,7 @@ const objects = [
     x: 240,
     y: 320,
     rad: 16,
-    redi: "https://www.youtube.com/@SecondFanTheCreator",
+    redi: "https://www.youtube.com/@TrizziEhgan",
     connections: [
       "Alx",
       "One",
