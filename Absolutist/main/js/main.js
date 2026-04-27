@@ -131,7 +131,6 @@ function loop() {
             if (objects[k].id == obj.links[j]) {
               tx = objects[k].x - x
               ty = objects[k].y - y
-              break
             }
           }
           
