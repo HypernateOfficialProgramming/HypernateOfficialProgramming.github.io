@@ -113,7 +113,7 @@ function loop() {
         ctx.beginPath();
 
         const visx = obj["x"] - x
-        const visy = obj["y"] - y)
+        const visy = obj["y"] - y
         ctx.arc(spacetime.width/2 + visx, spacetime.height/2 + visy, obj["rad"], 0, Math.PI * 2);
         ctx.fill();
 
