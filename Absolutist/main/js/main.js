@@ -22,6 +22,63 @@ const objects = [
     connections: [
       "Hae"
     ]
+  },
+  {
+    id: "Alx",
+    type: "Node",
+    x: 190,
+    y: 320,
+    rad: 16,
+    redi: "https://www.youtube.com/@Alaixis",
+    connections: [
+      "Trz",
+      "Tma",
+      "Tmy",
+      "Ton",
+      "One"
+    ]
+  },
+  {
+    id: "Ton",
+    type: "Node",
+    x: 200,
+    y: 360,
+    rad: 16,
+    redi: "https://www.youtube.com/@TON_618-4mz",
+    connections: [
+      "Alx",
+      "One",
+      "Sec",
+      "Trz"
+    ]
+  },
+  {
+    id: "Sec",
+    type: "Node",
+    x: 180,
+    y: 340,
+    rad: 16,
+    redi: "https://www.youtube.com/@SecondFanTheCreator",
+    connections: [
+      "Alx",
+      "One",
+      "Sec",
+      "Trz"
+    ]
+  },
+  {
+    id: "Trz",
+    type: "Node",
+    x: 240,
+    y: 320,
+    rad: 16,
+    redi: "https://www.youtube.com/@SecondFanTheCreator",
+    connections: [
+      "Alx",
+      "One",
+      "Sec",
+      "Trz"
+    ]
   }
 ]
 
