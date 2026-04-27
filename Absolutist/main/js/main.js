@@ -70,7 +70,7 @@ const objects = [
     id: "Trz",
     type: "Node",
     x: 170,
-    y: 330,
+    y: 290,
     rad: 16,
     redi: "https://www.youtube.com/@TrizziEhgan",
     connections: [
@@ -111,8 +111,34 @@ function loop() {
       if (obj["type"] == "Node") {  
         ctx.fillStyle = "white";
         ctx.beginPath();
-        ctx.arc(spacetime.width/2 + (obj["x"] - x), spacetime.height/2 + (obj["y"] - y), obj["rad"], 0, Math.PI * 2);
+
+        const visx = obj["x"] - x
+        const visy = obj["y"] - y)
+        ctx.arc(spacetime.width/2 + visx, spacetime.height/2 + visy, obj["rad"], 0, Math.PI * 2);
         ctx.fill();
+
+        for (let j=0;i<objects.connections.length;i++) {
+          ctx.beginPath();
+
+          ctx.lineWidth = 4;
+          ctx.strokeStyle = "white";
+          ctx.lineCap = "round";
+          
+          ctx.moveTo(visx, visy);
+          var tx = visx
+          var ty = visy
+          for (let k=0;i<objects.length;i++) {
+            if (objects[k].id == objects.connections[j]) {
+              tx = objects[k].x - x
+              ty = objects[k].y - y
+              break
+            }
+          }
+          
+          ctx.lineTo(tx, ty);
+          
+          ctx.stroke();
+        }
 
         if (Math.sqrt(((obj.x - x)**2)+((obj.y - y)**2))<20) {
           ctx.font = "bold 40px Calibri";
