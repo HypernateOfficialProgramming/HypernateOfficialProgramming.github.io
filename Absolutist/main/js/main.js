@@ -92,7 +92,7 @@ const objects = [
     id: "Nsx",
     type: "Node",
     x: 300,
-    y: 540,
+    y: 220,
     rad: 16,
     redi: "https://www.youtube.com/@AccidentalDoxxing/",
     links: [
