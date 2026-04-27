@@ -69,7 +69,7 @@ const objects = [
   {
     id: "Trz",
     type: "Node",
-    x: 210,
+    x: 170,
     y: 330,
     rad: 16,
     redi: "https://www.youtube.com/@TrizziEhgan",
