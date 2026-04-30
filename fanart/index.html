@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanart Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Overview</h1>
+    <p>Here's the fanart for my channel that I was able to compile! If you want to make fanart for me, mention me so I see it. Also, make sure it's not NSFW or otherwise inappropriate. That's gonna suck. </p>
+    <h1>Hypernate Fanart</h1>
+    <div class="fanart"></div>
+    <script>
+        const tofind = [
+            "banner",
+            "ultraturbine",
+            "brokenscript",
+            "genesisredesign",
+            "firemover",
+            "firemoverupd"
+        ];
+
+        const main_container = document.querySelector(".fanart");
+
+        for (let i = 0; i < tofind.length; i++) {
+            const name = tofind[i];
+
+            const container = document.createElement("div");
+            container.className = "fanart-entry";
+
+            const text = document.createElement("p");
+            const img = document.createElement("img");
+
+            img.src = "list/" + name + "/image.png";
+            img.style.maxWidth = "400px";
+
+            fetch("./list/" + name + "/data.json")
+                .then(response => response.json())
+                .then(data => {
+                    text.innerHTML = "<strong>" + (data.name) + "</strong><br><strong>Author: </strong>" + (data.creator) + "<br><strong>Source: </strong> <a href=\"" + (data.link) + "\">Link...</a><br>" + "<strong>Notes: </strong>" + (data.note);
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    text.innerHTML = "<strong>" + name + "</strong>";
+                });
+
+            container.appendChild(text);
+            container.appendChild(img);
+            main_container.appendChild(container);
+        }
+    </script>
+</body>
+</html>
