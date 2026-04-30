@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greater Space Object Creation Tool</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+      background: #000;
+    }
+
+    .controls {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      width: 380px;
+      background: rgba(20, 20, 20, 0.95);
+      border: 1px solid #444;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+      z-index: 10;
+    }
+
+    .controls h2 {
+      margin: 0 0 12px 0;
+      font-size: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 320px;
+      background: #111;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 8px;
+      padding: 10px;
+      font-family: monospace;
+      font-size: 13px;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #ddd;
+    }
+
+    .label {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="space"></canvas>
+
+  <div class="controls">
+    <h2>Preview</h2>
+
+    <div class="label">Zoom: <span id="zoomValue">1.0</span>x</div>
+    <input type="range" id="zoomSlider" min="0.1" max="5" step="0.1" value="1">
+
+    <div class="label">Objects</div>
+    <textarea id="objectInput">[
+  {
+    "id": "Alpha",
+    "type": "Node",
+    "x": -100,
+    "y": 0,
+    "rad": 16,
+    "redi": "https://en.wikipedia.org/wiki/Alpha",
+    "links": ["Beta", "Gamma"]
+  },
+  {
+    "id": "Beta",
+    "type": "Node",
+    "x": 100,
+    "y": 50,
+    "rad": 16,
+    "redi": "https://en.wikipedia.org/wiki/Beta",
+    "links": ["Alpha"]
+  },
+  {
+    "id": "Gamma",
+    "type": "Node",
+    "x": 0,
+    "y": -120,
+    "rad": 16,
+    "redi": "https://en.wikipedia.org/wiki/Gamma",
+    "links": ["Alpha"]
+  }
+]</textarea>
+
+    <button id="updateBtn">Update Preview</button>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('space');
+    const ctx = canvas.getContext('2d');
+    const zoomSlider = document.getElementById('zoomSlider');
+    const zoomValue = document.getElementById('zoomValue');
+    const objectInput = document.getElementById('objectInput');
+    const updateBtn = document.getElementById('updateBtn');
+
+    let objects = [];
+    let zoom = 1;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      render();
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+
+    function getCenterOfObjects() {
+      if (objects.length === 0) return { x: 0, y: 0 };
+
+      let sumX = 0;
+      let sumY = 0;
+
+      for (const obj of objects) {
+        sumX += obj.x;
+        sumY += obj.y;
+      }
+
+      return {
+        x: sumX / objects.length,
+        y: sumY / objects.length
+      };
+    }
+
+    function render() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'black';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const center = getCenterOfObjects();
+      const map = new Map(objects.map(o => [o.id, o]));
+
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = 3;
+      ctx.lineCap = 'round';
+
+      for (const obj of objects) {
+        const x1 = canvas.width / 2 + (obj.x - center.x) * zoom;
+        const y1 = canvas.height / 2 + (obj.y - center.y) * zoom;
+
+        for (const linkId of (obj.links || [])) {
+          const target = map.get(linkId);
+          if (!target) continue;
+
+          const x2 = canvas.width / 2 + (target.x - center.x) * zoom;
+          const y2 = canvas.height / 2 + (target.y - center.y) * zoom;
+
+          ctx.beginPath();
+          ctx.moveTo(x1, y1);
+          ctx.lineTo(x2, y2);
+          ctx.stroke();
+        }
+      }
+
+      for (const obj of objects) {
+        const drawX = canvas.width / 2 + (obj.x - center.x) * zoom;
+        const drawY = canvas.height / 2 + (obj.y - center.y) * zoom;
+
+        ctx.beginPath();
+        ctx.fillStyle = 'white';
+        ctx.arc(drawX, drawY, (obj.rad || 16) * zoom, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = 'white';
+        ctx.font = `${Math.max(12, 14 * zoom)}px Arial`;
+        ctx.textAlign = 'center';
+        ctx.fillText(obj.id, drawX, drawY - (obj.rad || 16) * zoom - 10);
+      }
+    }
+
+    function updatePreview() {
+      try {
+        objects = JSON.parse(objectInput.value);
+        zoom = parseFloat(zoomSlider.value);
+        zoomValue.textContent = zoom.toFixed(1);
+        render();
+      } catch (error) {
+        alert('Invalid object data: ' + error.message);
+      }
+    }
+
+    updateBtn.addEventListener('click', updatePreview);
+
+    resizeCanvas();
+    updatePreview();
+  </script>
+</body>
+</html>
