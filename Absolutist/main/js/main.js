@@ -291,7 +291,7 @@ function loop() {
         ctx.arc(spacetime.width/2 + visx, spacetime.height/2 + visy, obj["rad"], 0, Math.PI * 2);
         ctx.fill();
 
-        for (let j = 0; j < obj.links.length; j++) {
+        for (let j = 0; j < (obj.links ?? []).length; j++) {
           ctx.beginPath();
         
           ctx.lineWidth = 4;
@@ -302,7 +302,7 @@ function loop() {
           let ty = visy;
         
           for (let k = 0; k < objects.length; k++) {
-            if (objects[k].id === obj.links[j]) {
+            if (objects[k].id === (obj.links ?? [])[j]) {
               tx = objects[k].x - x;
               ty = objects[k].y - y;
             }
