@@ -155,6 +155,104 @@ const objects = [
       "Sec",
       "Trz"
     ]
+  },
+  {
+    "id": "Kal",
+    "type": "Node",
+    "x": 1400,
+    "y": -90,
+    "rad": 16,
+    "redi": "https://www.youtube.com/@Kales_Den",
+  },
+  {
+    "id": "Gct",
+    "type": "Node",
+    "x": 1200,
+    "y": 50,
+    "rad": 16,
+    "redi": "https://www.youtube.com/channel/UC0F6s3JadjJE9V91PgeFONA",
+    "links": ["Kal"]
+  },
+  {
+    "id": "Mys",
+    "type": "Node",
+    "x": 1300,
+    "y": -120,
+    "rad": 16,
+    "redi": "https://www.youtube.com/@MysticMoon-v4d",
+    "links": ["Kal"]
+  },
+  {
+    "id": "Trx",
+    "type": "Node",
+    "x": 1400,
+    "y": 120,
+    "rad": 16,
+    "redi": "https://www.youtube.com/@Trixorsaurus_LOLZ",
+    "links": ["Gct"]
+  },
+  {
+    "id": "Mea",
+    "type": "Node",
+    "x": 1100,
+    "y": 100,
+    "rad": 16,
+    "redi": "https://www.youtube.com/@Meawcat-w2s",
+    "links": ["Gct"]
+  },
+  {
+    "id": "Ajd",
+    "type": "Node",
+    "x": 1150,
+    "y": -50,
+    "rad": 16,
+    "redi": "https://www.youtube.com/@ahenjeetadutta-xd6qi",
+    "links": ["Mea"]
+  },
+  {
+    "id": "Yzi",
+    "type": "Node",
+    "x": 1100,
+    "y": 200,
+    "rad": 16,
+    "redi": "https://www.youtube.com/@Yazzii_SHE",
+    "links": ["Gct"]
+  },
+  {
+    "id": "Fox",
+    "type": "Node",
+    "x": 1500,
+    "y": 100,
+    "rad": 16,
+    "redi": "https://www.youtube.com/@FoxySlaysYT",
+    "links": ["Kal"]
+  },
+  {
+    "id": "Wcg",
+    "type": "Node",
+    "x": 100,
+    "y": -750,
+    "rad": 16,
+    "redi": "https://www.youtube.com/@wisecreepercreeper6890",
+    "links": ["Bwa"]
+  },
+{
+    "id": "Cag",
+    "type": "Node",
+    "x": 200,
+    "y": -850,
+    "rad": 16,
+    "redi": "https://www.youtube.com/@chattydeegaming",
+    "links": ["Wcg", "Bwa"]
+  },
+{
+    "id": "Bwa",
+    "type": "Node",
+    "x": 2,
+    "y": -950,
+    "rad": 16,
+    "redi": "https://www.youtube.com/@BIuewater",
+    "links": []
   }
 ]
 
