@@ -104,8 +104,8 @@ const objects = [
   {
     id: "Ton",
     type: "Node",
-    x: 260,
-    y: 380,
+    x: 170,
+    y: 270,
     rad: 16,
     redi: "https://www.youtube.com/@TON_618-4mz",
     links: [
@@ -147,8 +147,8 @@ const objects = [
   {
     id: "Trz",
     type: "Node",
-    x: 170,
-    y: 270,
+    x: 260,
+    y: 380,
     rad: 16,
     redi: "https://www.youtube.com/@TrizziEhgan",
     links: [
