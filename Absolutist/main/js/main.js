@@ -20,7 +20,8 @@ const objects = [
     rad: 16,
     redi: "https://www.youtube.com/channel/UCMcQLwt34BG2vTowHSuz2uQ",
     links: [
-      "Hae"
+      "Hae",
+      "Ton"
     ]
   },
   {
@@ -111,7 +112,8 @@ const objects = [
       "Alx",
       "One",
       "Sec",
-      "Trz"
+      "Trz",
+      "Ton"
     ]
   },
   {
