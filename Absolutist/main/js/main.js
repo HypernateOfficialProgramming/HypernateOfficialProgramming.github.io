@@ -28,7 +28,7 @@ const objects = [
     id: "Nal",
     type: "Node",
     x: -60,
-    y: 160,
+    y: 100,
     rad: 16,
     redi: "https://www.youtube.com/@Narciso9_FL0PTR0P1C4",
     links: [
@@ -40,7 +40,7 @@ const objects = [
     id: "Bey",
     type: "Node",
     x: -60,
-    y: 200,
+    y: 160,
     rad: 16,
     redi: "https://www.youtube.com/@TheyGottaCallMeBeyonder",
     links: [
