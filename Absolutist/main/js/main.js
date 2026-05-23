@@ -148,7 +148,7 @@ const objects = [
     x: 220,
     y: 440,
     rad: 16,
-    redi: "https://www.youtube.com/@SecondFanTheCreator",
+    redi: "https://www.youtube.com/@GalaxyAronS1LLYHBLover5331",
     links: [
       "Sec",
       "Ton",
