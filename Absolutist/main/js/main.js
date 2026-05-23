@@ -8,9 +8,7 @@ const objects = [
     y: 200,
     rad: 16,
     redi: "https://youtube.com/playlist?list=PLP8zGIXPmM4EikfD1c39oPuzNeENiv0JC&si=lpoxwJ_yybuymb4Y",
-    links: [
-      "Nyo"
-    ]
+    links: []
   },
   {
     id: "Nyo",
@@ -142,6 +140,19 @@ const objects = [
       "One",
       "Sec",
       "Trz"
+    ]
+  },
+  {
+    id: "Grn",
+    type: "Node",
+    x: 220,
+    y: 440,
+    rad: 16,
+    redi: "https://www.youtube.com/@SecondFanTheCreator",
+    links: [
+      "Sec",
+      "Ton",
+      "Nyo"
     ]
   },
   {
