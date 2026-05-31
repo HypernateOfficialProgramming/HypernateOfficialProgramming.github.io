@@ -95,7 +95,8 @@ const objects = [
       "Tma",
       "Tmy",
       "Ton",
-      "One"
+      "One",
+      "Hae"
     ]
   },
   {
@@ -110,7 +111,7 @@ const objects = [
       "One",
       "Sec",
       "Trz",
-      "Ton"
+      "Hae"
     ]
   },
   {
@@ -165,7 +166,8 @@ const objects = [
       "Alx",
       "One",
       "Sec",
-      "Trz"
+      "Trz",
+      "Hae"
     ]
   },
   {
