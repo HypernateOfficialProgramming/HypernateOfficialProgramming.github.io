@@ -65,7 +65,7 @@ body {
 .v752 {
 	padding: 30px;
 	color: #fff;
-	background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0) 100%), url('/divisions/astronomy/wikia/images/Cinary.jpg') no-repeat center/cover;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0) 100%), url('/vpoint/divisions/astronomy/wikia/images/Cinary.jpg') no-repeat center/cover;
 	width: 100%;
 	min-height: 400px;
 	flex: 1;
