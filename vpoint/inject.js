@@ -23,7 +23,7 @@ fetch('/vpoint/datalib.html')
         const liveCopyright = document.querySelector('.copyright');
 
         if (liveTopNav.dataset.darkmode) {
-            logo.src = "/images/vectorpoint_white.png";
+            logo.src = "/vpoint/images/vectorpoint_white.png";
         }
         if (liveTopNav) liveTopNav.innerHTML = topnav.innerHTML;
         if (liveCopyright) liveCopyright.innerHTML = copyright.innerHTML;
