@@ -4,6 +4,7 @@ fetch('/vpoint/datalib.html')
         return response.text();
     })
     .then(html => {
+        const hidden = document.querySelectorAll(".forever");
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
 
@@ -46,5 +47,14 @@ fetch('/vpoint/datalib.html')
                 }
             }
         });
+
+        const cur = new Date();
+
+        if (cur.getMonth() == 9 && cur.getDate() == 25) {
+            hidden.forEach(segment => {
+                segment.classList.remove("forever");
+                segment.classList.add("yetnevermore");
+            });
+        }
     })
     .catch(error => console.error('Error loading navigation:', error));
