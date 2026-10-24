@@ -64,7 +64,6 @@ body {
 	background-color: #000;
 	color: #f00;
 	font-family: "vcr-osd-mono", Times, Baskerville, Georgia, serif;
-	display: flex;
 }
 
 .header {
