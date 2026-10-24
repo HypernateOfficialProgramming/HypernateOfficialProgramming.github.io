@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'malgun-gothic';
+  src: url('fonts/malgun.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	background-color: #EEE;
+	font-family: malgun-gothic;
+}
+
+.topnav {
+	background-color: #FF8;
+	float: down;
+}
+
+.topnav-main {
+	overflow: hidden;
+	margin-right: 15px;
+	margin-bottom: 0px;
+}
+
+.topnav-divisions {
+	overflow: hidden;
+	margin-right: 15px;
+	margin-bottom: 0px;
+}
+
+.topnav a {
+	float: left;
+	color: #000;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+    .topnav a:hover {
+        background-color: #4df;
+        color: white;
+    }
+
+.topnav a.active {
+	background-color: #adf;
+	color: #ff0;
+}
+
+.forever {
+	background-color: #000;
+	color: #f00;
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	display: none;
+}
+
+.header {
+	background-color: #fff;
+	color: #000;
+}

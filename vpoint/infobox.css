@@ -1,0 +1,47 @@
+.infobox {
+    background-color: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    border-spacing: 3px;
+    color: #000;
+    float: right;
+    margin: 0 0 1em 1em;
+    padding: 0.5em;
+    width: 300px;
+    font-size: 88%;
+}
+
+.infobox-title {
+    font-size: 125%;
+    font-weight: bold;
+    text-align: center;
+    background-color: #eaecf0;
+    padding: 0.4em;
+}
+
+.infobox-image {
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+.infobox-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.infobox table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.infobox th {
+    text-align: left;
+    vertical-align: top;
+    width: 35%;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.infobox td {
+    vertical-align: top;
+    padding: 5px;
+}
