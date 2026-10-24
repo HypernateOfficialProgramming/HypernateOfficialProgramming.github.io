@@ -1,8 +1,15 @@
 @font-face {
-  font-family: 'malgun-gothic';
-  src: url('fonts/malgun.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'malgun-gothic';
+	src: url('fonts/malgun.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'vcr-osd-mono';
+	src: url('fonts/vcr.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
@@ -49,8 +56,15 @@ body {
 .forever {
 	background-color: #000;
 	color: #f00;
-	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-family: "vcr-osd-mono", Times, Baskerville, Georgia, serif;
 	display: none;
+}
+
+.yetnevermore {
+	background-color: #000;
+	color: #f00;
+	font-family: "vcr-osd-mono", Times, Baskerville, Georgia, serif;
+	display: flex;
 }
 
 .header {
