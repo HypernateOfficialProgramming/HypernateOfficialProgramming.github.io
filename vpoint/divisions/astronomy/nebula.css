@@ -1,6 +1,13 @@
 @font-face {
   font-family: 'malgun-gothic';
-  src: url('/fonts/malgun.ttf') format('truetype');
+  src: url('/vpoint/fonts/malgun.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'vhs-osd';
+  src: url('/vpoint/fonts/vhs.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -53,7 +60,14 @@ body {
 .forever {
 	background-color: #000;
 	color: #f00;
-	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-family: vhs-osd;
+	display: none;
+}
+
+.forever {
+	background-color: #000;
+	color: #f00;
+	font-family: vhs-osd;
 	display: none;
 }
 
