@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+        <title>VECTORPOINT</title>
+        <link rel="icon" type="image/png" href="../../favicon.ico">
+    </head>
+    <body>
+        <script src="/vpoint/inject.js"></script>
+        <script src="builder.js" defer></script>
+        <div class="topnav" data-darkmode="ig"> </div>
+
+        <br />
+        <div class="hint">DATA ENTRY UNIT: ACTIVE</div>
+        <h1> Page Builder </h1>
+
+        <div class="main">
+            <label for="json">Import: </label>
+            <input type="file" id="json" accept=".json"><br />
+
+            <input type="text" class="input-classic" placeholder="Record ID..." id="id"> <br />
+            <input type="text" class="input-classic" placeholder="Record name..." id="name"> <br />
+            <input type="text" class="input-classic" placeholder="Image address..." id="img"> <br />
+
+            <label for="reg">Type: </label>
+
+            <select name="reg" id="reg" class="input-classic">
+                <option value="rec">Record</option>
+                <option value="ano">Phenomenon</option>
+                <option value="arc">Archive</option>
+                <option value="org">Organization</option>
+            </select><br />
+
+            <div class="inputs" id="inp-non-org">
+                <label for="cat">Category: </label>
+
+                <select name="cat" id="cat" class="input-classic">
+                    <option value="astr">Astronomical</option>
+                    <option value="atmo">Atmospheric</option>
+                    <option value="tech">Technological</option>
+                    <option value="biol">Biological</option>
+                    <option value="thau">Thaumaturgical</option>
+                </select><br />
+
+                <input type="text" class="input-classic" placeholder="Time observed (42113378-10-25)" id="observed"> <br />
+                <input type="text" class="input-classic" placeholder="Location..." id="location"> <br />
+                <input type="text" class="input-classic" placeholder="Lead division..." id="division"> <br />
+                <input type="text" class="input-classic" placeholder="Summary..." id="summary"> <br />
+
+            </div>
+
+            <div class="inputs" id="inp-org">
+                <label for="cato">Category: </label>
+
+                <select name="cato" id="cato" class="input-classic">
+                    <option value="coal">Coalition</option>
+                    <option value="corp">Corporation</option>
+                    <option value="foun">Foundation</option>
+                    <option value="coop">Cooperative</option>
+                </select><br />
+
+                <input type="text" class="input-classic" placeholder="Relation to Vectorpoint..." id="relation"> <br />
+                <input type="text" class="input-classic" placeholder="Known disposition..." id="disposition"> <br />
+                <input type="text" class="input-classic" placeholder="Known operational area..." id="area"> <br />
+                <input type="text" class="input-classic" placeholder="Known members... (split by comma)" id="members"> <br />
+                <input type="text" class="input-classic" placeholder="Stated or observed objectives..." id="objective"> <br />
+                <input type="text" class="input-classic" placeholder="Information status... (split by comma)" id="status"> <br />
+
+            </div>
+
+            <input type="text" class="input-classic" placeholder="Related records... (split by comma)" id="related"> <br />
+            <textarea id="data" name="data" rows="5" cols="40" class="input-classic input-classic-area" placeholder=""></textarea> <br />
+
+            <button type="button" class="big-red-button" id="start">Generate</button>
+        </div>
+    </body>
+</html>

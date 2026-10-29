@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="/vpoint/infobox.css">
+    <title>VECTORPOINT</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico">
+</head>
+<body>
+    <script src="/vpoint/inject.js"></script>
+    <script src="../search.js" defer></script>
+    <div class="topnav" data-darkmode="ig"> </div>
+
+    <h1>Research Archive</h1>
+    <div class="hint">Anomaly Research / Research Repository</div><br />
+
+    <div class="main" data-type="arc">
+        <p>Scientific papers, investigation reports, experimental results, technical documents, and analysis.</p>
+
+        <input type="text" class="input-classic" placeholder="Search records by ID or query..." id="id"> <br />
+
+        <label for="cat">Category: </label>
+
+        <select name="cat" id="cat" class="input-classic">
+            <option value="">All categories</option>
+            <option value="astr">Astronomical</option>
+            <option value="atmo">Atmospheric</option>
+            <option value="tech">Technological</option>
+            <option value="biol">Biological</option>
+            <option value="thau">Thaumaturgical</option>
+        </select>  <br />
+
+        <button type="button" class="big-red-button" id="start">Search</button>
+
+        <h2> Results </h2> <br />
+        
+        <div class="results"></div>
+    </div>
+
+    <div class="view" style="display: none">
+        <aside class="infobox">
+            <div class="infobox-title">Title</div>
+
+            <div class="infobox-image">
+                <img src="../images/placeholder.png" alt="placeholder" width="300" class="infobox-image-inner">
+            </div>
+
+            <table>
+                <tbody id="infobox-table-body"></tbody>
+            </table>
+        </aside>
+
+        <h1 id="title"> Title </h1>
+
+        <div id="doc">
+            Placeholder
+        </div>
+
+    </div>
+</body>
+</html>

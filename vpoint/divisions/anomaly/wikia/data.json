@@ -1,0 +1,24 @@
+[
+  {
+    "InternalID": "003",
+    "ID": "ORG-003",
+    "Name": "Beacon Coalition",
+    "Image": "../images/BeaconIcon.png",
+    "Type": "org",
+    "Category": "coal",
+    "Relation": "External organization / known to Vectorpoint",
+    "Disposition": "Non-hostile; seeks peace",
+    "Area": "",
+    "Members": [
+      "Tantalum-180m1",
+      "Arsenic-92",
+      "Zephyrus"
+    ],
+    "Objective": "Maintain coexistence between native inhabitants and Cattos",
+    "Status": "Based on available reports",
+    "Related": [
+      "PHEN-020"
+    ],
+    "Data": "The <strong>Beacon Coalition</strong> is an organization operating at interstellar scales.<br /><br />There are currently three known members, yet the true count remains unknown. Estimates have put the total to nearly 120."
+  }
+]
