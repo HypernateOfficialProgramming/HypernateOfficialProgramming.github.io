@@ -1,15 +1,14 @@
 @font-face {
-  font-family: 'malgun-gothic';
-  src: url('/vpoint/fonts/malgun.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'malgun-gothic';
+	src: url('/vpoint/fonts/malgun.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
-
 @font-face {
-  font-family: 'vhs-osd';
-  src: url('/vpoint/fonts/vhs.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'vcr-osd';
+	src: url('/vpoint/fonts/vcr.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
@@ -60,19 +59,43 @@ body {
 .forever {
 	background-color: #000;
 	color: #f00;
-	font-family: vhs-osd;
+	font-family: vcr-osd;
 	display: none;
 }
 
 .yetnevermore {
 	background-color: #000;
 	color: #f00;
-	font-family: vhs-osd;
+	font-family: vcr-osd;
 }
 
 .header {
 	background-color: #fff;
 	color: #204;
+}
+
+.notice-outer {
+	background-color: #fff;
+	color: #204;
+	padding-top: 1px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	min-width: 0px;
+	width: fit-content;
+	display: flex;
+	gap: 4px;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.notice-inner {
+	background-color: #102;
+	color: #fff;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
 }
 
 .v752 {
